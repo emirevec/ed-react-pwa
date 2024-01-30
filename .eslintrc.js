@@ -4,6 +4,8 @@ module.exports = {
         "es2021": true
     },
     "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
         "standard-with-typescript",
         "plugin:react/recommended"
     ],
@@ -20,6 +22,7 @@ module.exports = {
             }
         }
     ],
+    "parser": '@typescript-eslint/parser',
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module",
@@ -29,6 +32,7 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "react/prop-types": "off",
         "react/react-in-jsx-scope": "off"
-    }
+    },
 }
