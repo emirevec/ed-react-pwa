@@ -6,6 +6,7 @@
 - [Benefits of Using TypeScript](#benefits-of-using-typescript)
 - [Progressive Web App Features](#progressive-web-app-features)
 - [Tailwind CSS for Styling](#Tailwind-CSS-for-Styling)
+- [Code Quality and Tools](#code-quality-and-tools)
 
 ## Project Description
 
@@ -26,6 +27,10 @@ Adopting TypeScript in our React ecommerce project brings key advantages, includ
 ## Tailwind CSS for Styling
 
 The project uses Tailwind CSS for styling, enabling a utility-first approach to building user interfaces. Tailwind provides a comprehensive set of utility classes, making styling more intuitive and efficient while maintaining flexibility in design. Additionally, we leverage components created by Flowbite to enhance our UI implementation.
+
+## Code Quality and Tools
+
+To maintain code quality and enhance the development workflow, this project utilizes various tools, including ESLint a pluggable and configurable linter designed to identify and fix issues in both JavaScript and TypeScript code. ESLint plays a crucial role in enforcing consistent coding standards and catching potential issues early in the development process.
 
 >
 > To view the content of this and other courses, you can visit the [EducacionIT website](https://educacionit.com.ar)
