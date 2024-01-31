@@ -14,7 +14,6 @@ const Navbar = (): JSX.Element => {
                 </a>
                 <ButtonHamburguer></ButtonHamburguer>
                 <NavbarMenu items={items} ></NavbarMenu>
-                
             </div>
         </nav>
     )
