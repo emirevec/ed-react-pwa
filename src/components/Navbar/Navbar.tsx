@@ -2,9 +2,8 @@ import React from 'react'
 import ButtonHamburguer from '../common/ButtonHamburguer'
 import NavbarMenu from './NavbarMenu'
 
-
 const Navbar = () => {
-    const items = ["Op 1", "Op 2", "Op 3"]
+    const items = ['Op 1', 'Op 2', 'Op 3']
 
     return (
         <nav className="border-green-600 bg-theme dark:bg-green-900 dark:border-green-700">
@@ -15,7 +14,6 @@ const Navbar = () => {
                 </a>
                 <ButtonHamburguer></ButtonHamburguer>
                 <NavbarMenu items={items} ></NavbarMenu>
-                
             </div>
         </nav>
     )
