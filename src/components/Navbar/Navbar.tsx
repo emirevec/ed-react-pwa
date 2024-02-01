@@ -1,9 +1,11 @@
 import React from 'react'
 import ButtonHamburguer from '../common/ButtonHamburguer'
 import NavbarMenu from './NavbarMenu'
+import ButtonCart from '../common/ButtonCart'
+import SearchBar from './SearchBar'
 
-const Navbar = () => {
-    const items = ['Op 1', 'Op 2', 'Op 3']
+const Navbar = (): JSX.Element => {
+    const items = ['Store', 'Categories', 'Watchlist']
 
     return (
         <nav className="border-green-600 bg-theme dark:bg-green-900 dark:border-green-700">
@@ -12,9 +14,13 @@ const Navbar = () => {
                     <img src="./src/images/icons/icon-144x144.png" className="h-8" alt="Virtual Store Logo" />
                     <span className="self-center text-2xl text-normal font-semibold whitespace-nowrap dark:text-white">Virtual Sotre Plus</span>
                 </a>
-                <ButtonHamburguer></ButtonHamburguer>
-                <NavbarMenu items={items} ></NavbarMenu>
             </div>
+            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4">
+                <ButtonHamburguer></ButtonHamburguer>
+                <SearchBar></SearchBar>
+                <ButtonCart></ButtonCart>
+            </div>
+            <NavbarMenu items={items} ></NavbarMenu>
         </nav>
     )
 }
