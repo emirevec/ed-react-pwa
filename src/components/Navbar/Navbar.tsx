@@ -2,6 +2,7 @@ import React from 'react'
 import ButtonHamburguer from '../common/ButtonHamburguer'
 import NavbarMenu from './NavbarMenu'
 import ButtonCart from '../common/ButtonCart'
+import SearchBar from './SearchBar'
 
 const Navbar = (): JSX.Element => {
     const items = ['Store', 'Categories', 'Watchlist']
@@ -18,7 +19,8 @@ const Navbar = (): JSX.Element => {
                     <ButtonHamburguer></ButtonHamburguer>
                 </div>
             </div>
-                <NavbarMenu items={items} ></NavbarMenu>
+            <SearchBar></SearchBar>
+            <NavbarMenu items={items} ></NavbarMenu>
         </nav>
     )
 }
