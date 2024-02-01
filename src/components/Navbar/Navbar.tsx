@@ -13,10 +13,12 @@ const Navbar = (): JSX.Element => {
                     <img src="./src/images/icons/icon-144x144.png" className="h-8" alt="Virtual Store Logo" />
                     <span className="self-center text-2xl text-normal font-semibold whitespace-nowrap dark:text-white">Virtual Sotre Plus</span>
                 </a>
-                <ButtonHamburguer></ButtonHamburguer>
-                <NavbarMenu items={items} ></NavbarMenu>
-                <ButtonCart></ButtonCart>
+                <div className='flex gap-2'>
+                    <ButtonCart></ButtonCart>
+                    <ButtonHamburguer></ButtonHamburguer>
+                </div>
             </div>
+                <NavbarMenu items={items} ></NavbarMenu>
         </nav>
     )
 }
