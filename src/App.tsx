@@ -1,13 +1,14 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar'
-import Gallery from './components/gallery/Gallery'
+import Gallery from './components/Gallery/Gallery'
+import Cart from './components/Cart/Cart'
 
 function App (): JSX.Element {
-  const items = ['Jeans', 'Sneakers']
   return (
     <div className="App">
       <Navbar></Navbar>
-      <Gallery items={items}></Gallery>
+      <Gallery></Gallery>
+      <Cart></Cart>
     </div>
   )
 }
