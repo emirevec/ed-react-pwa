@@ -2,7 +2,7 @@ import React from 'react'
 
 const ButtonCart = (): JSX.Element => {
     return (
-        <button type="button" className="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-normal rounded-lg border-2 border-teal-200 hover:bg-gradient-to-r hover:from-teal-200 hover:to-lime-200 focus:ring-2 focus:outline-none focus:ring-teal-200 dark:focus:ring-teal-700" aria-expanded="false">
+        <button type="button" className="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-white rounded-lg border-2 border-white hover:bg-gradient-to-r hover:from-teal-400 hover:to-lime-300 focus:ring-2 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-700" aria-expanded="false">
             <span className="sr-only">Go to cart</span>
             <svg baseProfile="tiny" height="24px" version="1.2" viewBox="0 0 24 24" width="24px" fill="currentColor">
                 <g id="Layer_1">
