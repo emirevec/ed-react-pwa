@@ -8,7 +8,7 @@ const Navbar = (): JSX.Element => {
     const items = ['Store', 'Categories', 'Watchlist']
 
     return (
-        <nav className="border-green-600 bg-theme dark:bg-green-900 dark:border-green-700">
+        <nav className="border-green-600 bg-gradient-to-r from-teal-200 to-lime-200">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src="./src/images/icons/icon-144x144.png" className="h-8" alt="Virtual Store Logo" />
@@ -20,7 +20,7 @@ const Navbar = (): JSX.Element => {
                 <SearchBar></SearchBar>
                 <ButtonCart></ButtonCart>
             </div>
-            <NavbarMenu items={items} ></NavbarMenu>
+            {<NavbarMenu items={items} ></NavbarMenu>}
         </nav>
     )
 }
