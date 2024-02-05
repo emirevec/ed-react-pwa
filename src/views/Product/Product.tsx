@@ -1,6 +1,6 @@
 import React from 'react'
 import ProductStar from './ProductStar'
-import Button from '../../components/common/Button'
+import Button from '../../components/Buttons/Button'
 
 interface Data {
     id: number
