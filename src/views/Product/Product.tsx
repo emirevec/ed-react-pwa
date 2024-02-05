@@ -1,6 +1,7 @@
 import React from 'react'
 import ProductStar from './ProductStar'
 import Button from '../../components/Buttons/Button'
+import ButtonClose from '../../components/Buttons/ButtonClose'
 
 interface Data {
     id: number
@@ -34,9 +35,10 @@ const Product: React.FC<Props> = ({ data }) => {
                     From: "opacity-100 translate-y-0 md:scale-100"
                     To: "opacity-0 translate-y-4 md:translate-y-0 md:scale-95" */}
                     <div className="flex justify-center w-full transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl">
-                    <div id={`product_${data.id}`} className="w-full max-w-sm mx-2 mt-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div id={`product_${data.id}`} className="relative w-full max-w-sm mx-2 mt-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <ButtonClose></ButtonClose>
                         <a href="#">
-                            <img className="p-8 rounded-t-lg" src={data.src} alt="product image" />
+                            <img className="mt-4 p-8 rounded-t-lg" src={data.src} alt="product image" />
                         </a>
                         <div className="px-5 pb-5">
                             <a href="#">
