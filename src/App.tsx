@@ -1,17 +1,11 @@
 import React from 'react'
-import Product from './views/Product/Product'
+import Rout from './routes/Rout'
 
 function App (): JSX.Element {
-    const data = {
-        id: 1,
-        title: 'Anteojos',
-        src: './src/images/products/glasses/Anteojos.jpg.webp',
-        price: 500
-    }
-  return (
-      <div className="App">
-        <Product data={data}></Product>
-      </div>
+    return (
+        <div className="App">
+            <Rout></Rout>
+        </div>
     )
 }
 
