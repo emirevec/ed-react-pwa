@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../../components/Buttons/Button'
+import ButtonLink from '../../components/Buttons/ButtonLink'
 import ButtonClose from '../../components/Buttons/ButtonClose'
 
 const Cart = (): JSX.Element => {
@@ -65,7 +65,7 @@ const Cart = (): JSX.Element => {
                                     </div>
                                     <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                                     <div className="flex justify-center mt-6">
-                                        <Button text="Checkout"></Button>
+                                        <ButtonLink to='/' text="Checkout"></ButtonLink>
                                     </div>
                                     <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                                         <p>

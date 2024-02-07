@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../Buttons/Button'
+import ButtonLink from '../Buttons/ButtonLink'
 
 interface Props {
     items: string[]
@@ -11,7 +11,7 @@ const NavbarMenu: React.FC<Props> = ({ items }) => {
             <ul className="flex flex-wrap font-medium rounded-lg py-3 pl-2 dark:bg-gray-800 dark:border-gray-700">
                 {items.map((item) => (
                 <li key={`NavbarMenuItem${item}`}>
-                    <Button text={item}></Button>
+                    <ButtonLink to={`/${item}`} text={item}></ButtonLink>
                 </li>
                 ))
                 }
