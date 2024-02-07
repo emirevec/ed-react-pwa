@@ -1,12 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Navbar from '../components/Navbar/Navbar'
+import Home from '../views/Home'
 
 const Rout: React.FC = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/' Component={ Navbar }/>
+                <Route path='/' Component={ Home }/>
             </Routes>
         </BrowserRouter>
     )
