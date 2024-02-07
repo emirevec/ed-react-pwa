@@ -1,6 +1,6 @@
 import React from 'react'
 import ProductStar from './ProductStar'
-import Button from '../../components/Buttons/Button'
+import ButtonLink from '../../components/Buttons/ButtonLink'
 import ButtonClose from '../../components/Buttons/ButtonClose'
 
 interface Data {
@@ -56,7 +56,7 @@ const Product: React.FC<Props> = ({ data }) => {
                             </div>
                             <div className="flex items-center justify-between">
                                 <span className="text-3xl font-bold text-gray-900 dark:text-white">$ {data.price} </span>
-                                <Button text="Add to cart"></Button>
+                                <ButtonLink to='/cart' text='Add to cart'></ButtonLink>
                             </div>
                         </div>
                     </div>
