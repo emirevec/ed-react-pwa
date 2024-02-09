@@ -19,8 +19,8 @@ interface Props {
 const GalleryCard: React.FC<Props> = ({ product }) => {
     return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <img className="rounded-t-lg" src={product.src} alt="" />
         <div className="p-5">
+            <img className="w-full h-80 rounded-t-lg" src={product.src} alt="" />
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> {product.title} </h5>
             <div className="flex items-center justify-between">
                 <ButtonLink to={`/product/:${product.id}`} text='Details'></ButtonLink>

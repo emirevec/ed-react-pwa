@@ -20,7 +20,7 @@ interface Props {
 
 const Gallery: React.FC<Props> = ({ products }) => {
     return (
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 m-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 m-2">
             {products.map((item) => (
                     <GalleryCard key={item.id} product={item} ></GalleryCard>
                 )
