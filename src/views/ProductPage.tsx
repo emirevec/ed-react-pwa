@@ -1,10 +1,9 @@
 import React from 'react'
-import NavBar from '../components/Navbar/Navbar'
-import Gallery from '../components/Gallery/Gallery'
-import { useSearchParams } from 'react-router-dom'
+import Product from '../components/Product/Product'
+import { useParams } from 'react-router-dom'
 
-const Home = (): JSX.Element => {
-    let products = [
+const ProductPage = (): JSX.Element => {
+    const prods = [
         {
             id: 1,
             title: 'ALI',
@@ -446,18 +445,11 @@ const Home = (): JSX.Element => {
             category: 't-shirt'
         }
     ]
-    const [searchParams] = useSearchParams()
-    const filter: string | null = searchParams.get('q')
-    if (filter !== '' && filter != null) {
-        products = products.filter(item => item.title.toLocaleLowerCase().includes(filter.toLocaleLowerCase()))
-    }
-
-    return (
-        <>
-        <NavBar></NavBar>
-        <Gallery products={products}></Gallery>
-        </>
-    )
+    const { id } = useParams()
+    const data = prods.find(item => item.id === id)
+  return (
+    <Product data={data}></Product>
+  )
 }
 
-export default Home
+export default ProductPage
