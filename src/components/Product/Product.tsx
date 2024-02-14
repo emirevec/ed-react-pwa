@@ -3,15 +3,19 @@ import ProductStar from './ProductStar'
 import ButtonLink from '../../components/Buttons/ButtonLink'
 import ButtonClose from '../../components/Buttons/ButtonClose'
 
-interface Data {
-    id: number
+interface Prod {
+    id: string
     title: string
     src: string
     price: number
+    description: string
+    sizes: string[]
+    colors: string[]
+    category: string
 }
 
 interface Props {
-    data: Data
+    data?: Prod
 }
 
 const Product: React.FC<Props> = ({ data }) => {
@@ -35,14 +39,12 @@ const Product: React.FC<Props> = ({ data }) => {
                     From: "opacity-100 translate-y-0 md:scale-100"
                     To: "opacity-0 translate-y-4 md:translate-y-0 md:scale-95" */}
                     <div className="flex justify-center w-full transform text-left text-base transition md:my-8 md:max-w-2xl md:px-4 lg:max-w-4xl">
-                    <div id={`product_${data.id}`} className="relative w-full max-w-sm mx-2 mt-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div id={`product_${data?.id}`} className="relative w-full max-w-sm mx-2 mt-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                     <ButtonClose></ButtonClose>
-                        <a href="#">
-                            <img className="mt-4 p-8 rounded-t-lg" src={data.src} alt="product image" />
-                        </a>
+                        <img className="mt-4 p-8 rounded-t-lg" src={data?.src} alt="product image" />
                         <div className="px-5 pb-5">
                             <a href="#">
-                                <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{data.title} </h5>
+                                <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{data?.title} </h5>
                             </a>
                             <div className="flex items-center mt-2.5 mb-5">
                                 <div className="flex items-center space-x-1 rtl:space-x-reverse">
@@ -55,7 +57,7 @@ const Product: React.FC<Props> = ({ data }) => {
                                 <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
                             </div>
                             <div className="flex items-center justify-between">
-                                <span className="text-3xl font-bold text-gray-900 dark:text-white">$ {data.price} </span>
+                                <span className="text-3xl font-bold text-gray-900 dark:text-white">$ {data?.price} </span>
                                 <ButtonLink to='/cart' text='Add to cart'></ButtonLink>
                             </div>
                         </div>

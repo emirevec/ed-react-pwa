@@ -1,6 +1,6 @@
 import React from 'react'
-import ButtonLink from '../../components/Buttons/ButtonLink'
-import ButtonClose from '../../components/Buttons/ButtonClose'
+import ButtonLink from '../components/Buttons/ButtonLink'
+import ButtonClose from '../components/Buttons/ButtonClose'
 
 const Cart = (): JSX.Element => {
     return (

@@ -2,7 +2,7 @@ import React from 'react'
 import ButtonLink from '../Buttons/ButtonLink'
 
 interface Product {
-    id: number
+    id: string
     title: string
     src: string
     price: number

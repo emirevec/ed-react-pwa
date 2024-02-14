@@ -1,22 +1,16 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from '../views/Home'
-import Product from '../views/Product/Product'
-import Cart from '../views/Cart/Cart'
+import HomePage from '../views/HomePage'
+import ProductPage from '../views/ProductPage'
+import CartPage from '../views/CartPage'
 
 const Rout: React.FC = () => {
-    const data = {
-        id: 1,
-        title: 'Glasses',
-        src: './src/images/products/glasses/Anteojos.jpg.webp',
-        price: 500
-    }
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={ <Home/> }/>
-                <Route path='/product/:id' element={ <Product data={data} /> }/>
-                <Route path='/cart' element={ <Cart/> }/>
+                <Route path='/' element={ <HomePage/> }/>
+                <Route path='/product/:id' element={ <ProductPage/> }/>
+                <Route path='/cart' element={ <CartPage/> }/>
             </Routes>
         </BrowserRouter>
     )
