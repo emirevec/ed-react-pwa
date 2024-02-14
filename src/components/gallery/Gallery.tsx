@@ -2,7 +2,7 @@ import React from 'react'
 import GalleryCard from './GalleryCard'
 
 interface Product {
-    id: number
+    id: string
     title: string
     src: string
     price: number
