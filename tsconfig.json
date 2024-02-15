@@ -23,6 +23,7 @@
   "include": [
     "src",
     ".eslintrc.js",
-    "text.tsx"
+    "text.tsx",
+    "types/*.d.ts"
   ],
 }
