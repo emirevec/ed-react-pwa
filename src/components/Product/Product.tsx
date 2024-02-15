@@ -2,17 +2,7 @@ import React from 'react'
 import ProductStar from './ProductStar'
 import ButtonLink from '../../components/Buttons/ButtonLink'
 import ButtonClose from '../../components/Buttons/ButtonClose'
-
-interface Prod {
-    id: string
-    title: string
-    src: string
-    price: number
-    description: string
-    sizes: string[]
-    colors: string[]
-    category: string
-}
+import { type Prod } from '../../types/types'
 
 interface Props {
     data?: Prod
