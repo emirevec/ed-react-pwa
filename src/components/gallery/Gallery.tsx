@@ -1,19 +1,9 @@
 import React from 'react'
+import { type Prod } from '../../types/types'
 import GalleryCard from './GalleryCard'
 import { useSearchParams } from 'react-router-dom'
 
-interface Product {
-    id: string
-    title: string
-    src: string
-    price: number
-    description: string
-    sizes: string[]
-    colors: string[]
-    category: string
-}
-
-type ProductList = Product[]
+type ProductList = Prod[]
 
 const Gallery = (): JSX.Element => {
     let products: ProductList = [

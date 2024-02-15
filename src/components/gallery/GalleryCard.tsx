@@ -1,19 +1,9 @@
 import React from 'react'
+import { type Prod } from '../../types/types'
 import ButtonLink from '../Buttons/ButtonLink'
 
-interface Product {
-    id: string
-    title: string
-    src: string
-    price: number
-    description: string
-    sizes: string[]
-    colors: string[]
-    category: string
-}
-
 interface Props {
-    product: Product
+    product: Prod
 }
 
 const GalleryCard: React.FC<Props> = ({ product }) => {
