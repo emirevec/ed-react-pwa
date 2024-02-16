@@ -9,11 +9,9 @@ export interface Prod {
     category: string
 }
 
-export interface Cart {
-    id: string
-    title: string
-    size: string
-    color: string
+export interface CartIt {
+    productId: string
     count: number
-    price: number
 }
+
+export type ItemCart = Prod & CartIt
