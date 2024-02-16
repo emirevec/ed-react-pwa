@@ -1,8 +1,8 @@
 import React from 'react'
-import { type Cart } from '../../types/types'
+import type { ItemCart } from '../../types/types'
 
 interface props {
-    item: Cart
+    item: ItemCart
 }
 
 const CartItem: React.FC<props> = ({ item }) => {
@@ -10,7 +10,7 @@ const CartItem: React.FC<props> = ({ item }) => {
         <li className="cart_li flex py-6">
             <div
                 className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                <img src=""
+                <img src={item.src}
                     alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
                     className="h-full w-full object-cover object-center" />
             </div>
