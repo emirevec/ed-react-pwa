@@ -1,60 +1,10 @@
 import React from 'react'
-import ButtonLink from '../components/Buttons/ButtonLink'
-import ButtonClose from '../components/Buttons/ButtonClose'
+import Cart from '../components/Cart/Cart'
 
-const Cart = (): JSX.Element => {
+const CartPage = (): JSX.Element => {
     return (
-        <div className="relative z-10" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
-            <div id="cart_opacity" className="fixed inset-0 bg-gray-500 bg-opacity-100 transition-opacity ease-in-out duration-500 opacity-0"></div>
-            <div className="fixed inset-0 overflow-hidden">
-                <div className="absolute inset-0 overflow-hidden">
-                    <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-                        <div id="cart_slide"
-                            className="pointer-events-auto w-screen max-w-md transform transition ease-in-out duration-500 sm:duration-700 translate-x-0">
-                            <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
-                                <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
-                                    <div className="flex items-start justify-between">
-                                        <h2 className="text-lg font-medium text-gray-900" id="slide-over-title">Shopping cart</h2>
-                                        <div className="ml-3 flex h-7 items-center">
-                                            <ButtonClose></ButtonClose>
-                                        </div>
-                                    </div>
-                                    <div className="mt-8">
-                                        <div className="flow-root">
-                                            <ul role="list" className="-my-6 divide-y divide-gray-200">
-                                                Item
-                                                
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-                                    <div className="flex justify-between text-base font-medium text-gray-900">
-                                        <p>Subtotal</p>
-                                        <p>$ monto </p>
-                                    </div>
-                                    <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
-                                    <div className="flex justify-center mt-6">
-                                        <ButtonLink to='/' text="Checkout"></ButtonLink>
-                                    </div>
-                                    <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
-                                        <p>
-                                            or
-                                            <br />
-                                            <button type="button" className="font-medium text-strong hover:text-green-500">
-                                                Continue Shopping
-                                                <span aria-hidden="true"> &rarr;</span>
-                                            </button>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Cart></Cart>
     )
 }
 
-export default Cart
+export default CartPage
