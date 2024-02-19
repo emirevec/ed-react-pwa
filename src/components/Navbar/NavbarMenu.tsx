@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonLink from '../Buttons/ButtonLink'
+import { ButtonLink } from '../Buttons'
 
 interface Props {
     items: string[]

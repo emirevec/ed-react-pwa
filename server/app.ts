@@ -17,5 +17,16 @@ connectToDb((err) => {
 
 // routes
 app.get('/products', (req, res) => {
+    let products = []
+    db.collection('products')
+        .find()
+        .sort({ category: 'glasses' })
+        .forEach(glass => products.push(glass))
+        .then(() => {
+            res.status(200).json(glass)
+        .catch(() => {
+            res.status(500).json({error: 'Could not fetch the documents'})
+        } )
+        })
     res.json({ mssg: 'msg' })
 })
