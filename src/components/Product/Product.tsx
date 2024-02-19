@@ -1,7 +1,6 @@
 import React from 'react'
 import ProductStar from './ProductStar'
-import ButtonLink from '../../components/Buttons/ButtonLink'
-import ButtonClose from '../../components/Buttons/ButtonClose'
+import { ButtonLink, ButtonClose } from '../../components/Buttons'
 import { type Prod } from '../../types/types'
 
 interface Props {
