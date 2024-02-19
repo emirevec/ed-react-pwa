@@ -24,6 +24,7 @@
     "src",
     ".eslintrc.js",
     "text.tsx",
-    "types/*.d.ts"
+    "types/*.d.ts",
+    "server"
   ],
 }
