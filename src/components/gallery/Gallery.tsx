@@ -1,6 +1,6 @@
 import React from 'react'
 import { type Prod } from '../../types/types'
-import GalleryCard from './GalleryCard'
+import { GalleryCard } from './'
 import { useSearchParams } from 'react-router-dom'
 
 type ProductList = Prod[]
