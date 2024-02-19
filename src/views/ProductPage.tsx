@@ -1,5 +1,5 @@
 import React from 'react'
-import Product from '../components/Product/Product'
+import { Product } from '../components/Product'
 import { useParams } from 'react-router-dom'
 
 const ProductPage = (): JSX.Element => {

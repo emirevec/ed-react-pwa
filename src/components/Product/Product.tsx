@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductStar from './ProductStar'
+import { ProductStar } from './'
 import { ButtonLink, ButtonClose } from '../../components/Buttons'
 import { type Prod } from '../../types/types'
 
