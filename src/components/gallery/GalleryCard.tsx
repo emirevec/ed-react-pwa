@@ -1,6 +1,6 @@
 import React from 'react'
 import { type Prod } from '../../types/types'
-import ButtonLink from '../Buttons/ButtonLink'
+import { ButtonLink } from '../Buttons'
 
 interface Props {
     product: Prod

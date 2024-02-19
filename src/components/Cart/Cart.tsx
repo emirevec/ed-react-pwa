@@ -1,8 +1,7 @@
 import React from 'react'
 import type { Prod, CartIt, ItemCart } from '../../types/types'
-import CartItem from './CartItem'
-import ButtonClose from '../Buttons/ButtonClose'
-import ButtonLink from '../Buttons/ButtonLink'
+import { CartItem } from './'
+import { ButtonClose, ButtonLink } from '../Buttons'
 
 type CartItems = CartIt[]
 
