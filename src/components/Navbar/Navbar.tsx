@@ -1,6 +1,6 @@
 import React from 'react'
 import { ButtonHamburguer, ButtonCart } from '../Buttons'
-import NavbarMenu from './NavbarMenu'
+import { NavbarMenu } from './'
 import SearchBar from './SearchBar'
 
 const Navbar = (): JSX.Element => {
