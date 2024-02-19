@@ -1,5 +1,5 @@
 import React from 'react'
-import type { Prod, CartIt } from '../../types/types'
+import type { Prod, CartIt, ItemCart } from '../../types/types'
 import CartItem from './CartItem'
 import ButtonClose from '../Buttons/ButtonClose'
 import ButtonLink from '../Buttons/ButtonLink'
@@ -462,19 +462,34 @@ const cartProducts: CartItems = [
 ]
 
 const Cart = (): JSX.Element => {
-    const addedProducts = cartProducts.map(cProd => {
+    const addedProducts = cartProducts.map((cProd): ItemCart => {
         const aux = products.find(i => i.id === cProd.productId)
-        return {
-            id: aux?.id,
-            title: aux?.title,
-            src: aux?.src,
-            price: aux?.price,
-            description: aux?.description,
-            sizes: [],
-            colors: [],
-            category: aux?.category,
-            productId: cProd.productId,
-            count: cProd.count
+        if (aux !== undefined) {
+            return {
+                id: aux.id,
+                title: aux?.title,
+                src: aux?.src,
+                price: aux?.price,
+                description: aux?.description,
+                sizes: [],
+                colors: [],
+                category: aux?.category,
+                productId: cProd.productId,
+                count: cProd.count
+            }
+        } else {
+            return {
+                id: '',
+                title: '',
+                src: '',
+                price: 0,
+                description: '',
+                sizes: [],
+                colors: [],
+                category: '',
+                productId: '',
+                count: 0
+            }
         }
     }
     )
