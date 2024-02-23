@@ -1,9 +1,7 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import EcommerceProvider from './context/EcommerceProvider'
-import HomePage from './views/HomePage'
-import ProductPage from './views/ProductPage'
-import CartPage from './views/CartPage'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HomePage, ProductPage, CartPage } from './views'
 
 function App (): JSX.Element {
     return (
