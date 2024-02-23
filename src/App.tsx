@@ -1,10 +1,20 @@
 import React from 'react'
-import Rout from './routes/Rout'
+import EcommerceProvider from './context/EcommerceProvider'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HomePage, ProductPage, CartPage } from './views'
 
 function App (): JSX.Element {
     return (
         <div className="App">
-            <Rout></Rout>
+            <BrowserRouter>
+                <EcommerceProvider>
+                    <Routes>
+                        <Route path='/' element={ <HomePage/> }/>
+                        <Route path='/product/:id' element={ <ProductPage/> }/>
+                        <Route path='/cart' element={ <CartPage/> }/>
+                    </Routes>
+                </EcommerceProvider>
+            </BrowserRouter>
         </div>
     )
 }
