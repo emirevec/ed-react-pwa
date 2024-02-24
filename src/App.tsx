@@ -1,5 +1,5 @@
 import React from 'react'
-import EcommerceProvider from './context/EcommerceProvider'
+import EcommerceProvider from './context'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HomePage, ProductPage, CartPage } from './views'
 
