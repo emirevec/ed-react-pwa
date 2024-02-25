@@ -1,12 +1,8 @@
 import { type Prod } from '../types/types'
 
-interface ProductList {
-    getAllProducts: () => Prod[]
-}
+type ProductList = Prod[]
 
-export const MockDataSource = (): ProductList => ({
-    getAllProducts () {
-        return [
+export const MockDataSource: ProductList = [
             {
                 id: '1',
                 title: 'ALI',
@@ -448,5 +444,3 @@ export const MockDataSource = (): ProductList => ({
                 category: 't-shirt'
             }
         ]
-    }
-})
