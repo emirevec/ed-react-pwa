@@ -14,9 +14,7 @@ const Gallery = (): JSX.Element => {
     useEffect(() => {
         const fetchProdcutcs = async (): Promise<void> => {
             try {
-                const api = MockDataSource()
-                const allProducts = api.getAllProducts()
-                setProducts(allProducts)
+                setProducts(MockDataSource)
             } catch (error) {
                 console.error('Error fetching products:', error)
             }
