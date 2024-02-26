@@ -1,4 +1,4 @@
-import { type Prod } from '../types/types'
+import { type Prod } from '../../types/types'
 
 type Data = Prod[]
 
