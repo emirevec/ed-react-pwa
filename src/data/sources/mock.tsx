@@ -1,8 +1,13 @@
-import { type Prod } from '../types/types'
+import { type Prod } from '../../types/types'
 
-type ProductList = Prod[]
+interface mockData {
+    getAllProducts: () => Promise<Prod[]>
+    postCheckout: (checkoutData: any) => Promise<boolean>
+}
 
-export const MockDataSource: ProductList = [
+export const MockDataSource = (): mockData => ({
+    async getAllProducts () {
+        return [
             {
                 id: '1',
                 title: 'ALI',
@@ -444,3 +449,8 @@ export const MockDataSource: ProductList = [
                 category: 't-shirt'
             }
         ]
+    },
+    async postCheckout (checkoutData: any) {
+        return true
+    }
+})
