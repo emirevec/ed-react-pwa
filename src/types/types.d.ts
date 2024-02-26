@@ -20,3 +20,12 @@ interface mockData {
     getAllProducts: () => Promise<Prod[]>
     postCheckout: (checkoutData: any) => Promise<boolean>
 }
+
+interface ContextValue {
+    products: {
+        all: () => Promise<Prod[]>
+    }
+    checkout: {
+        post: (checkoutData: any) => Promise<boolean>
+    }
+}

@@ -1,9 +1,7 @@
 import { createContext } from 'react'
-import { type Prod } from '../types/types'
+import { type ContextValue } from '../types/types'
 
-type ProductList = Prod[]
-
-export const EcommerceContext = createContext<ProductList>([])
+export const EcommerceContext = createContext<ContextValue | undefined>(undefined)
 
 export const EcommerceProvider = EcommerceContext.Provider
 
@@ -11,7 +9,7 @@ export const withDataSources = (Component: React.ComponentType<any>): React.FC<a
     const WithDataSources = (props: any): JSX.Element => (
     <EcommerceContext.Consumer>
         {
-            (value) => <Component {...props} MockDataSource={value} />
+            (value) => <Component {...props} dataSources={value} />
         }
     </EcommerceContext.Consumer>
     )

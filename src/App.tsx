@@ -1,14 +1,13 @@
-import React from 'react'
-import { EcommerceProvider } from './context'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { EcommerceProvider } from './context'
+import DataSources from './data'
 import { HomePage, ProductPage, CartPage } from './views'
-import { MockDataSource } from './data'
 
 function App (): JSX.Element {
     return (
         <div className="App">
             <BrowserRouter>
-                <EcommerceProvider value={MockDataSource}>
+                <EcommerceProvider value={DataSources}>
                     <Routes>
                         <Route path='/' element={ <HomePage/> }/>
                         <Route path='/product/:id' element={ <ProductPage/> }/>

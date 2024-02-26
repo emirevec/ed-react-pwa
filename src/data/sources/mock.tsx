@@ -1,9 +1,4 @@
-import { type Prod } from '../../types/types'
-
-interface mockData {
-    getAllProducts: () => Promise<Prod[]>
-    postCheckout: (checkoutData: any) => Promise<boolean>
-}
+import { type mockData } from '../../types/types'
 
 export const MockDataSource = (): mockData => ({
     async getAllProducts () {

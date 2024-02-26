@@ -11,8 +11,8 @@ const checkoutDataSourceBuilder = (dataSource: mockData) => () => ({
     post: dataSource.postCheckout
 })
 
-const productsDataSource = productsDataSourceBuilder(dataSource)
-const checkoutDataSource = checkoutDataSourceBuilder(dataSource)
+const productsDataSource = productsDataSourceBuilder(dataSource)()
+const checkoutDataSource = checkoutDataSourceBuilder(dataSource)()
 
 const DataSources = {
     products: productsDataSource,
