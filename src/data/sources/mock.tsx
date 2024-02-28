@@ -1,8 +1,8 @@
-import { type Prod } from '../types/types'
+import { type mockData } from '../../types/types'
 
-type ProductList = Prod[]
-
-export const MockDataSource: ProductList = [
+export const MockDataSource = (): mockData => ({
+    async getAllProducts () {
+        return [
             {
                 id: '1',
                 title: 'ALI',
@@ -444,3 +444,8 @@ export const MockDataSource: ProductList = [
                 category: 't-shirt'
             }
         ]
+    },
+    async postCheckout (checkoutData: any) {
+        return true
+    }
+})
