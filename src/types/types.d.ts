@@ -9,6 +9,8 @@ export interface Prod {
     category: string
 }
 
+export type ProductList = Prod[]
+
 export interface CartIt {
     productId: string
     count: number
@@ -16,12 +18,12 @@ export interface CartIt {
 
 export type ItemCart = Prod & CartIt
 
-interface mockData {
+export interface mockData {
     getAllProducts: () => Promise<Prod[]>
     postCheckout: (checkoutData: any) => Promise<boolean>
 }
 
-interface ContextValue {
+export interface ContextValue {
     products: {
         all: () => Promise<Prod[]>
     }

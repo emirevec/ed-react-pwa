@@ -6,7 +6,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '1',
                 title: 'ALI',
-                src: './src/images/products/glasses/ali-pazani-GwglcplmXDs-unsplash.jpg.webp',
+                src: '../../src/images/products/glasses/ali-pazani-GwglcplmXDs-unsplash.jpg.webp',
                 price: 318,
                 description: 'ali-pazani-GwglcplmXDs-unsplash',
                 sizes: [],
@@ -16,7 +16,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '2',
                 title: 'ANTEOJOS.JPG.WEBP',
-                src: './src/images/products/glasses/Anteojos.jpg.webp',
+                src: '../../src/images/products/glasses/Anteojos.jpg.webp',
                 price: 331,
                 description: 'Anteojos',
                 sizes: [],
@@ -26,7 +26,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '3',
                 title: 'APOSTOLOS',
-                src: './src/images/products/glasses/apostolos-vamvouras-mKi4QEJXRCs-unsplash.jpg.webp',
+                src: '../../src/images/products/glasses/apostolos-vamvouras-mKi4QEJXRCs-unsplash.jpg.webp',
                 price: 346,
                 description: 'apostolos-vamvouras-mKi4QEJXRCs-unsplash',
                 sizes: [],
@@ -36,7 +36,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '4',
                 title: 'CHARLES',
-                src: './src/images/products/glasses/charles-deluvio-1-nx1QR5dTE-unsplash.jpg.webp',
+                src: '../../src/images/products/glasses/charles-deluvio-1-nx1QR5dTE-unsplash.jpg.webp',
                 price: 388,
                 description: 'charles-deluvio-1-nx1QR5dTE-unsplash',
                 sizes: [],
@@ -46,7 +46,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '5',
                 title: 'CHASE',
-                src: './src/images/products/glasses/chase-fade-WgjmiOxYKRQ-unsplash.jpg.webp',
+                src: '../../src/images/products/glasses/chase-fade-WgjmiOxYKRQ-unsplash.jpg.webp',
                 price: 684,
                 description: 'chase-fade-WgjmiOxYKRQ-unsplash',
                 sizes: [],
@@ -56,7 +56,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '6',
                 title: 'ETHAN',
-                src: './src/images/products/glasses/ethan-robertson-SYx3UCHZJlo-unsplash.jpg.webp',
+                src: '../../src/images/products/glasses/ethan-robertson-SYx3UCHZJlo-unsplash.jpg.webp',
                 price: 388,
                 description: 'ethan-robertson-SYx3UCHZJlo-unsplash',
                 sizes: [],
@@ -66,7 +66,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '7',
                 title: 'GIORGIO',
-                src: './src/images/products/glasses/giorgio-trovato-K62u25Jk6vo-unsplash.jpg.webp',
+                src: '../../src/images/products/glasses/giorgio-trovato-K62u25Jk6vo-unsplash.jpg.webp',
                 price: 206,
                 description: 'giorgio-trovato-K62u25Jk6vo-unsplash',
                 sizes: [],
@@ -76,7 +76,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '8',
                 title: 'KARSTEN',
-                src: './src/images/products/glasses/karsten-winegeart-zgLydtnQmS4-unsplash.jpg.webp',
+                src: '../../src/images/products/glasses/karsten-winegeart-zgLydtnQmS4-unsplash.jpg.webp',
                 price: 661,
                 description: 'karsten-winegeart-zgLydtnQmS4-unsplash',
                 sizes: [],
@@ -86,7 +86,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '9',
                 title: 'NOAH',
-                src: './src/images/products/glasses/noah-black-1p3N5SHz0Hk-unsplash.jpg.webp',
+                src: '../../src/images/products/glasses/noah-black-1p3N5SHz0Hk-unsplash.jpg.webp',
                 price: 656,
                 description: 'noah-black-1p3N5SHz0Hk-unsplash',
                 sizes: [],
@@ -96,7 +96,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '10',
                 title: 'SEBASTIAN',
-                src: './src/images/products/glasses/sebastian-coman-travel-dtOTQYmTEs0-unsplash.jpg.webp',
+                src: '../../src/images/products/glasses/sebastian-coman-travel-dtOTQYmTEs0-unsplash.jpg.webp',
                 price: 704,
                 description: 'sebastian-coman-travel-dtOTQYmTEs0-unsplash',
                 sizes: [],
@@ -106,7 +106,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '11',
                 title: 'STEPHANIE',
-                src: './src/images/products/glasses/stephanie-hau-P4TPjOXKqY8-unsplash.jpg.webp',
+                src: '../../src/images/products/glasses/stephanie-hau-P4TPjOXKqY8-unsplash.jpg.webp',
                 price: 169,
                 description: 'stephanie-hau-P4TPjOXKqY8-unsplash',
                 sizes: [],
@@ -116,7 +116,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '12',
                 title: 'ALI',
-                src: './src/images/products/jeans/ali-pazani-Pdds9XsWyoM-unsplash.jpg.webp',
+                src: '../../src/images/products/jeans/ali-pazani-Pdds9XsWyoM-unsplash.jpg.webp',
                 price: 532,
                 description: 'ali-pazani-Pdds9XsWyoM-unsplash',
                 sizes: [],
@@ -126,7 +126,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '13',
                 title: 'ALICIA',
-                src: './src/images/products/jeans/alicia-petresc-BciCcl8tjVU-unsplash.jpg.webp',
+                src: '../../src/images/products/jeans/alicia-petresc-BciCcl8tjVU-unsplash.jpg.webp',
                 price: 336,
                 description: 'alicia-petresc-BciCcl8tjVU-unsplash',
                 sizes: [],
@@ -136,7 +136,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '14',
                 title: 'CHRISTOPHER',
-                src: './src/images/products/jeans/christopher-ivanov-h6jgQaBNIyA-unsplash.jpg.webp',
+                src: '../../src/images/products/jeans/christopher-ivanov-h6jgQaBNIyA-unsplash.jpg.webp',
                 price: 837,
                 description: 'christopher-ivanov-h6jgQaBNIyA-unsplash',
                 sizes: [],
@@ -146,7 +146,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '15',
                 title: 'DAVE',
-                src: './src/images/products/jeans/dave-goudreau-UfYPR2UIOW4-unsplash.jpg.webp',
+                src: '../../src/images/products/jeans/dave-goudreau-UfYPR2UIOW4-unsplash.jpg.webp',
                 price: 719,
                 description: 'dave-goudreau-UfYPR2UIOW4-unsplash',
                 sizes: [],
@@ -156,7 +156,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '16',
                 title: 'JEANS.JPG.WEBP',
-                src: './src/images/products/jeans/jeans.jpg.webp',
+                src: '../../src/images/products/jeans/jeans.jpg.webp',
                 price: 321,
                 description: 'jeans',
                 sizes: [],
@@ -166,7 +166,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '17',
                 title: 'JIMMY',
-                src: './src/images/products/jeans/jimmy-jimenez-hGxReQwL5jE-unsplash.jpg.webp',
+                src: '../../src/images/products/jeans/jimmy-jimenez-hGxReQwL5jE-unsplash.jpg.webp',
                 price: 819,
                 description: 'jimmy-jimenez-hGxReQwL5jE-unsplash',
                 sizes: [],
@@ -176,7 +176,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '18',
                 title: 'JOSE',
-                src: './src/images/products/jeans/jose-martinez-59wAqtRDSj0-unsplash.jpg.webp',
+                src: '../../src/images/products/jeans/jose-martinez-59wAqtRDSj0-unsplash.jpg.webp',
                 price: 293,
                 description: 'jose-martinez-59wAqtRDSj0-unsplash',
                 sizes: [],
@@ -186,7 +186,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '19',
                 title: 'MARLON',
-                src: './src/images/products/jeans/marlon-silva-EbyfUtxtEbc-unsplash.jpg.webp',
+                src: '../../src/images/products/jeans/marlon-silva-EbyfUtxtEbc-unsplash.jpg.webp',
                 price: 546,
                 description: 'marlon-silva-EbyfUtxtEbc-unsplash',
                 sizes: [],
@@ -196,7 +196,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '20',
                 title: 'SILVIU',
-                src: './src/images/products/jeans/silviu-beniamin-tofan-spqwdZXzduU-unsplash.jpg.webp',
+                src: '../../src/images/products/jeans/silviu-beniamin-tofan-spqwdZXzduU-unsplash.jpg.webp',
                 price: 178,
                 description: 'silviu-beniamin-tofan-spqwdZXzduU-unsplash',
                 sizes: [],
@@ -206,7 +206,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '21',
                 title: 'TAMARA',
-                src: './src/images/products/jeans/tamara-bellis-zDyJOj8ZXG0-unsplash.jpg.webp',
+                src: '../../src/images/products/jeans/tamara-bellis-zDyJOj8ZXG0-unsplash.jpg.webp',
                 price: 725,
                 description: 'tamara-bellis-zDyJOj8ZXG0-unsplash',
                 sizes: [],
@@ -216,7 +216,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '22',
                 title: 'VLADIMIR',
-                src: './src/images/products/jeans/vladimir-fedotov-MPfyh3xJ1iE-unsplash.jpg.webp',
+                src: '../../src/images/products/jeans/vladimir-fedotov-MPfyh3xJ1iE-unsplash.jpg.webp',
                 price: 917,
                 description: 'vladimir-fedotov-MPfyh3xJ1iE-unsplash',
                 sizes: [],
@@ -226,7 +226,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '23',
                 title: 'ALEXANDRA',
-                src: './src/images/products/sneakers/alexandra-gorn-CJ6SJO_yR5w-unsplash.jpg.webp',
+                src: '../../src/images/products/sneakers/alexandra-gorn-CJ6SJO_yR5w-unsplash.jpg.webp',
                 price: 242,
                 description: 'alexandra-gorn-CJ6SJO_yR5w-unsplash',
                 sizes: [],
@@ -236,7 +236,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '24',
                 title: 'ANDRES',
-                src: './src/images/products/sneakers/andres-jasso-PqbL_mxmaUE-unsplash.jpg.webp',
+                src: '../../src/images/products/sneakers/andres-jasso-PqbL_mxmaUE-unsplash.jpg.webp',
                 price: 343,
                 description: 'andres-jasso-PqbL_mxmaUE-unsplash',
                 sizes: [],
@@ -246,7 +246,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '25',
                 title: 'CALZADO.JPG.WEBP',
-                src: './src/images/products/sneakers/Calzado.jpg.webp',
+                src: '../../src/images/products/sneakers/Calzado.jpg.webp',
                 price: 307,
                 description: 'Calzado',
                 sizes: [],
@@ -256,7 +256,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '26',
                 title: 'CAMILA',
-                src: './src/images/products/sneakers/camila-damasio-mWYhrOiAgmA-unsplash.jpg.webp',
+                src: '../../src/images/products/sneakers/camila-damasio-mWYhrOiAgmA-unsplash.jpg.webp',
                 price: 331,
                 description: 'camila-damasio-mWYhrOiAgmA-unsplash',
                 sizes: [],
@@ -266,7 +266,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '27',
                 title: 'IMANI',
-                src: './src/images/products/sneakers/imani-bahati-LxVxPA1LOVM-unsplash.jpg.webp',
+                src: '../../src/images/products/sneakers/imani-bahati-LxVxPA1LOVM-unsplash.jpg.webp',
                 price: 513,
                 description: 'imani-bahati-LxVxPA1LOVM-unsplash',
                 sizes: [],
@@ -276,7 +276,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '28',
                 title: 'IRENE',
-                src: './src/images/products/sneakers/irene-kredenets-dwKiHoqqxk8-unsplash.jpg.webp',
+                src: '../../src/images/products/sneakers/irene-kredenets-dwKiHoqqxk8-unsplash.jpg.webp',
                 price: 414,
                 description: 'irene-kredenets-dwKiHoqqxk8-unsplash',
                 sizes: [],
@@ -286,7 +286,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '29',
                 title: 'JACLYN',
-                src: './src/images/products/sneakers/jaclyn-moy-ugZxwLQuZec-unsplash.jpg.webp',
+                src: '../../src/images/products/sneakers/jaclyn-moy-ugZxwLQuZec-unsplash.jpg.webp',
                 price: 956,
                 description: 'jaclyn-moy-ugZxwLQuZec-unsplash',
                 sizes: [],
@@ -296,7 +296,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '30',
                 title: 'JAKOB',
-                src: './src/images/products/sneakers/jakob-owens-JzJSybPFb3s-unsplash.jpg.webp',
+                src: '../../src/images/products/sneakers/jakob-owens-JzJSybPFb3s-unsplash.jpg.webp',
                 price: 905,
                 description: 'jakob-owens-JzJSybPFb3s-unsplash',
                 sizes: [],
@@ -306,7 +306,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '31',
                 title: 'MOHAMMAD',
-                src: './src/images/products/sneakers/mohammad-metri-E-0ON3VGrBc-unsplash.jpg.webp',
+                src: '../../src/images/products/sneakers/mohammad-metri-E-0ON3VGrBc-unsplash.jpg.webp',
                 price: 630,
                 description: 'mohammad-metri-E-0ON3VGrBc-unsplash',
                 sizes: [],
@@ -316,7 +316,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '32',
                 title: 'PAUL',
-                src: './src/images/products/sneakers/paul-gaudriault-a-QH9MAAVNI-unsplash.jpg.webp',
+                src: '../../src/images/products/sneakers/paul-gaudriault-a-QH9MAAVNI-unsplash.jpg.webp',
                 price: 632,
                 description: 'paul-gaudriault-a-QH9MAAVNI-unsplash',
                 sizes: [],
@@ -326,7 +326,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '33',
                 title: 'WENGANG',
-                src: './src/images/products/sneakers/wengang-zhai-_fOL6ebfECQ-unsplash.jpg.webp',
+                src: '../../src/images/products/sneakers/wengang-zhai-_fOL6ebfECQ-unsplash.jpg.webp',
                 price: 189,
                 description: 'wengang-zhai-_fOL6ebfECQ-unsplash',
                 sizes: [],
@@ -336,7 +336,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '34',
                 title: 'AMIR',
-                src: './src/images/products/t-shirt/amir-babaei-0NK0FtJnIWE-unsplash.jpg.webp',
+                src: '../../src/images/products/t-shirt/amir-babaei-0NK0FtJnIWE-unsplash.jpg.webp',
                 price: 843,
                 description: 'amir-babaei-0NK0FtJnIWE-unsplash',
                 sizes: [],
@@ -346,7 +346,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '35',
                 title: 'CHELSEA',
-                src: './src/images/products/t-shirt/chelsea-ferenando-r_-M00daj2Y-unsplash.jpg.webp',
+                src: '../../src/images/products/t-shirt/chelsea-ferenando-r_-M00daj2Y-unsplash.jpg.webp',
                 price: 885,
                 description: 'chelsea-ferenando-r_-M00daj2Y-unsplash',
                 sizes: [],
@@ -356,7 +356,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '36',
                 title: 'CHRISTIAN',
-                src: './src/images/products/t-shirt/christian-bolt-VW5VjskNXZ8-unsplash.jpg.webp',
+                src: '../../src/images/products/t-shirt/christian-bolt-VW5VjskNXZ8-unsplash.jpg.webp',
                 price: 438,
                 description: 'christian-bolt-VW5VjskNXZ8-unsplash',
                 sizes: [],
@@ -366,7 +366,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '37',
                 title: 'FREE',
-                src: './src/images/products/t-shirt/free-to-use-sounds-HXaCARJwKUQ-unsplash.jpg.webp',
+                src: '../../src/images/products/t-shirt/free-to-use-sounds-HXaCARJwKUQ-unsplash.jpg.webp',
                 price: 193,
                 description: 'free-to-use-sounds-HXaCARJwKUQ-unsplash',
                 sizes: [],
@@ -376,7 +376,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '38',
                 title: 'JASON',
-                src: './src/images/products/t-shirt/jason-yoder-CzZGxHUrOlI-unsplash.jpg.webp',
+                src: '../../src/images/products/t-shirt/jason-yoder-CzZGxHUrOlI-unsplash.jpg.webp',
                 price: 229,
                 description: 'jason-yoder-CzZGxHUrOlI-unsplash',
                 sizes: [],
@@ -386,7 +386,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '39',
                 title: 'MARCEL',
-                src: './src/images/products/t-shirt/marcel-j-uWrCdB5sM-unsplash.jpg.webp',
+                src: '../../src/images/products/t-shirt/marcel-j-uWrCdB5sM-unsplash.jpg.webp',
                 price: 461,
                 description: 'marcel-j-uWrCdB5sM-unsplash',
                 sizes: [],
@@ -396,7 +396,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '40',
                 title: 'MARCUS',
-                src: './src/images/products/t-shirt/marcus-ganahl-EQIrev_NGH8-unsplash.jpg.webp',
+                src: '../../src/images/products/t-shirt/marcus-ganahl-EQIrev_NGH8-unsplash.jpg.webp',
                 price: 510,
                 description: 'marcus-ganahl-EQIrev_NGH8-unsplash',
                 sizes: [],
@@ -406,7 +406,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '41',
                 title: 'NANDKISHORE',
-                src: './src/images/products/t-shirt/nandkishore-sahu-6M14IWufRLw-unsplash.jpg.webp',
+                src: '../../src/images/products/t-shirt/nandkishore-sahu-6M14IWufRLw-unsplash.jpg.webp',
                 price: 568,
                 description: 'nandkishore-sahu-6M14IWufRLw-unsplash',
                 sizes: [],
@@ -416,7 +416,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '42',
                 title: 'REMERAS.JPG.WEBP',
-                src: './src/images/products/t-shirt/Remeras.jpg.webp',
+                src: '../../src/images/products/t-shirt/Remeras.jpg.webp',
                 price: 902,
                 description: 'Remeras',
                 sizes: [],
@@ -426,7 +426,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '43',
                 title: 'SINA',
-                src: './src/images/products/t-shirt/sina-rezakhani-PMdtwPKWt5Q-unsplash.jpg.webp',
+                src: '../../src/images/products/t-shirt/sina-rezakhani-PMdtwPKWt5Q-unsplash.jpg.webp',
                 price: 329,
                 description: 'sina-rezakhani-PMdtwPKWt5Q-unsplash',
                 sizes: [],
@@ -436,7 +436,7 @@ export const MockDataSource = (): mockData => ({
             {
                 id: '44',
                 title: 'TOM',
-                src: './src/images/products/t-shirt/tom-cochereau-bf_CMgK8Pj0-unsplash.jpg.webp',
+                src: '../../src/images/products/t-shirt/tom-cochereau-bf_CMgK8Pj0-unsplash.jpg.webp',
                 price: 336,
                 description: 'tom-cochereau-bf_CMgK8Pj0-unsplash',
                 sizes: [],
