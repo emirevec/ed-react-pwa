@@ -5,22 +5,22 @@ import {
     CART_DECREASECOUNT
 } from './action_types'
 
-export const cartAddItem = (id) => ({
+export const cartAddItem = (id, sizes, colors) => ({
     type: CART_ADDITEM,
-    payload: id
+    payload: { id, sizes, colors }
 })
 
-export const cartRemoveItem = (id) => ({
+export const cartRemoveItem = (id, sizes, colors) => ({
     type: CART_REMOVEITEM,
-    payload: id
+    payload: { id, sizes, colors }
 })
 
-export const cartIncreaseCount = (id) => ({
+export const cartIncreaseCount = (id, sizes, colors) => ({
     type: CART_INCREASECOUNT,
-    payload: id
+    payload: { id, sizes, colors }
 })
 
-export const cartDecreaseCount = (id) => ({
+export const cartDecreaseCount = (id, sizes, colors) => ({
     type: CART_DECREASECOUNT,
-    payload: id
+    payload: { id, sizes, colors }
 })
