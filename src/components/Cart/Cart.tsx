@@ -3,23 +3,12 @@ import type { ProductList, CartIt, ItemCart } from '../../types/types'
 import { CartItem } from './'
 import { ButtonClose, ButtonLink } from '../Buttons'
 import { withDataSources } from '../../context'
+import { connect } from 'react-redux'
 
 type CartItems = CartIt[]
 
-const cartProducts: CartItems = [
-    {
-        productId: '1',
-        count: 1
-    },
-    {
-        productId: '2',
-        count: 1
-    }
-]
-
-let Cart: React.FC<any> = ({ dataSources }: any): JSX.Element => {
+let Cart: React.FC<any> = ({ dataSources, cartItemsSource }: any): JSX.Element => {
     const [products, setProducts] = useState<ProductList>([])
-    const [addedProducts, setAddedProducts] = useState<Array<React.ReactElement<any, any>>>([])
 
     useEffect(() => {
         const fetchData = async (): Promise<void> => {
@@ -33,7 +22,21 @@ let Cart: React.FC<any> = ({ dataSources }: any): JSX.Element => {
     void fetchData()
     }, [])
 
-    useEffect(() => {
+    const addedProducts = cartItemsSource.map(it => {
+        const aux = products.find(i => i.id == it.id)
+        if (aux == undefined) {
+            return it
+        } else {
+            return {
+                title: aux.title,
+                size: it.size,
+                color: it.color,
+                price: aux.price,
+                count: it.count
+            }
+        }
+    }).map((val, index) => <CartItem key={index} item={val}></CartItem>)
+    /* useEffect(() => {
         const add: Array<React.ReactElement<any, any>> = cartProducts.map((cProd): ItemCart => {
             const aux = products.find(i => i.id === cProd.productId)
             if (aux !== undefined) {
@@ -66,7 +69,7 @@ let Cart: React.FC<any> = ({ dataSources }: any): JSX.Element => {
             }).map((val, index) => <CartItem key={index} item={val}></CartItem>)
             console.log(add)
         setAddedProducts(add)
-    }, [products])
+    }, [products]) */
     return (
         <div className="relative z-10" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
             <div id="cart_opacity" className="fixed inset-0 bg-gray-500 bg-opacity-100 transition-opacity ease-in-out duration-500 opacity-0"></div>
@@ -121,5 +124,11 @@ let Cart: React.FC<any> = ({ dataSources }: any): JSX.Element => {
 }
 
 Cart = withDataSources(Cart)
+
+const mapStateProps = (state) => ({
+    cartItemsSource: state.cart
+})
+
+Cart = connect(mapStateProps)(Cart)
 
 export default Cart
