@@ -2,12 +2,20 @@ import React from 'react'
 import type { ItemCart } from '../../types/types'
 import { cartDecreaseCount, cartIncreaseCount } from '../../redux/cart/actions'
 import { connect } from 'react-redux'
+import { type Dispatch } from 'redux'
 
-interface props {
+interface OwnProps {
     item: ItemCart
 }
 
-let CartItem: React.FC<props> = ({ item, inc, dec }) => (
+interface DispatchProps {
+    inc: (it: ItemCart) => void
+    dec: (it: ItemCart) => void
+}
+
+type Props = OwnProps & DispatchProps
+
+const CartItem: React.FC<Props> = ({ item, inc, dec }) => (
     <li className="cart_li flex py-6">
         <div
             className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
@@ -29,9 +37,9 @@ let CartItem: React.FC<props> = ({ item, inc, dec }) => (
             </div>
             <div className="flex items-center gap-1 p-2">
                 <p className=" items-center text-gray-500">Qty</p>
-                <div className="cart_decrease rounded-md border border-gray-300 bg-white px-3 py-1  text-sm font-medium text-gray-700 hover:bg-gray-50" onClick={() => dec(item)}>-</div>
+                <div className="cart_decrease rounded-md border border-gray-300 bg-white px-3 py-1  text-sm font-medium text-gray-700 hover:bg-gray-50" onClick={() => { dec(item) }}>-</div>
                 <p className=" items-center text-gray-500"> {item.count} </p>
-                <div className=" cart_increase rounded-md border border-gray-300 bg-white px-3 py-1 text-sm font-medium text-gray-700 hover:bg-gray-50" onClick={() => inc(item)}>+</div>
+                <div className=" cart_increase rounded-md border border-gray-300 bg-white px-3 py-1 text-sm font-medium text-gray-700 hover:bg-gray-50" onClick={() => { inc(item) }}>+</div>
             </div>
             <div className="flex">
                 <button id="{{this.id}}" type="button"
@@ -41,11 +49,26 @@ let CartItem: React.FC<props> = ({ item, inc, dec }) => (
     </li>
 )
 
-const mapDispatchTProps = (dispatch) => ({
-    inc: (it) => dispatch(cartIncreaseCount(it.id, it.size, it.color))
-    dec: (it) => dispatch(cartDecreaseCount(it.id, it.size, it.color))
+const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+    inc: (it: ItemCart) => dispatch(cartIncreaseCount(it.id, it.sizes, it.colors)),
+    dec: (it: ItemCart) => dispatch(cartDecreaseCount(it.id, it.sizes, it.colors))
 })
 
-CartItem = connect(null, mapDispatchTProps)(CartItem)
+export default connect(null, mapDispatchToProps)(CartItem)
 
-export default CartItem
+/* CartItem = connect(null, mapDispatchTProps)(CartItem)
+
+[{
+"resource": "/c:/Users/Windows/Documents/Emi/IT/reactjs/virtual/src/components/Cart/CartItem.tsx",
+"owner": "typescript",
+"code": "2345",
+"severity": 8,
+"message": "Argument of type 'FC<Props>' is not assignable to parameter of type 'ComponentType<Matching<MapDispatchToProps, Props>>'.\n  Type 'FunctionComponent<Props>' is not assignable to type 'FunctionComponent<Matching<MapDispatchToProps, Props>>'.\n    Types of parameters 'props' and 'props' are incompatible.\n      Type 'Matching<MapDispatchToProps, Props>' is not assignable to type 'Props'.",
+"source": "ts",
+"startLineNumber": 59,
+"startColumn": 26,
+"endLineNumber": 59,
+"endColumn": 34
+}]
+
+export default CartItem */
