@@ -31,3 +31,14 @@ export interface ContextValue {
         post: (checkoutData: any) => Promise<boolean>
     }
 }
+
+interface Payload {
+    id: Prod['id']
+    sizes: Prod['sizes']
+    colors: Prod['colors']
+}
+
+interface CartItemAction extends Action {
+    type: string
+    payload: Payload
+}

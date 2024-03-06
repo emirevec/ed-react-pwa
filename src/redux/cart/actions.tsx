@@ -1,5 +1,4 @@
-import { type Action } from 'redux'
-import type { Prod } from '../../types/types'
+import type { Prod, CartItemAction } from '../../types/types'
 
 import {
     CART_ADDITEM,
@@ -7,17 +6,6 @@ import {
     CART_INCREASECOUNT,
     CART_DECREASECOUNT
 } from './action_types'
-
-interface Payload {
-    id: Prod['id']
-    sizes: Prod['sizes']
-    colors: Prod['colors']
-}
-
-interface CartItemAction extends Action {
-    type: string
-    payload: Payload
-}
 
 export const cartAddItem = (id: Prod['id'], sizes: Prod['sizes'], colors: Prod['colors']): CartItemAction => ({
     type: CART_ADDITEM,
