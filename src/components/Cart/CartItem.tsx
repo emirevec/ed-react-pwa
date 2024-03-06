@@ -1,8 +1,8 @@
 import React from 'react'
-import type { ItemCart } from '../../types/types'
+import type { ItemCart, CartItemAction } from '../../types/types'
 import { cartDecreaseCount, cartIncreaseCount } from '../../redux/cart/actions'
 import { connect } from 'react-redux'
-import { type Dispatch } from 'redux'
+import type { Dispatch, Action } from 'redux'
 
 interface OwnProps {
     item: ItemCart
@@ -14,6 +14,8 @@ interface DispatchProps {
 }
 
 type Props = OwnProps & DispatchProps
+
+type UnknownAction = CartItemAction | Action<any>
 
 const CartItem: React.FC<Props> = ({ item, inc, dec }) => (
     <li className="cart_li flex py-6">
@@ -49,26 +51,9 @@ const CartItem: React.FC<Props> = ({ item, inc, dec }) => (
     </li>
 )
 
-const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+const mapDispatchToProps = (dispatch: Dispatch<UnknownAction>): DispatchProps => ({
     inc: (it: ItemCart) => dispatch(cartIncreaseCount(it.id, it.sizes, it.colors)),
     dec: (it: ItemCart) => dispatch(cartDecreaseCount(it.id, it.sizes, it.colors))
 })
 
 export default connect(null, mapDispatchToProps)(CartItem)
-
-/* CartItem = connect(null, mapDispatchTProps)(CartItem)
-
-[{
-"resource": "/c:/Users/Windows/Documents/Emi/IT/reactjs/virtual/src/components/Cart/CartItem.tsx",
-"owner": "typescript",
-"code": "2345",
-"severity": 8,
-"message": "Argument of type 'FC<Props>' is not assignable to parameter of type 'ComponentType<Matching<MapDispatchToProps, Props>>'.\n  Type 'FunctionComponent<Props>' is not assignable to type 'FunctionComponent<Matching<MapDispatchToProps, Props>>'.\n    Types of parameters 'props' and 'props' are incompatible.\n      Type 'Matching<MapDispatchToProps, Props>' is not assignable to type 'Props'.",
-"source": "ts",
-"startLineNumber": 59,
-"startColumn": 26,
-"endLineNumber": 59,
-"endColumn": 34
-}]
-
-export default CartItem */
