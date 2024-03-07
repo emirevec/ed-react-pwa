@@ -11,12 +11,20 @@ export interface Prod {
 
 export type ProductList = Prod[]
 
+// Remeber to check and delete
 export interface CartIt {
     productId: string
     count: number
 }
 
 export type ItemCart = Prod & CartIt
+
+export interface Cart {
+    id: Prod['id']
+    sizes: Prod['sizes']
+    colors: Prod['colors']
+    count: number
+}
 
 export interface mockData {
     getAllProducts: () => Promise<Prod[]>
@@ -30,4 +38,15 @@ export interface ContextValue {
     checkout: {
         post: (checkoutData: any) => Promise<boolean>
     }
+}
+
+interface Payload {
+    id: Prod['id']
+    sizes: Prod['sizes']
+    colors: Prod['colors']
+}
+
+interface CartItemAction extends Action {
+    type: string
+    payload: Payload
 }
