@@ -1,21 +1,15 @@
 import React from 'react'
-import type { ItemCart, CartItemAction } from '../../types/types'
+import type { ItemCart, ItemCartProps, UnknownAction } from '../../types/types'
 import { cartDecreaseCount, cartIncreaseCount } from '../../redux/cart/actions'
 import { connect } from 'react-redux'
-import type { Dispatch, Action } from 'redux'
-
-interface OwnProps {
-    item: ItemCart
-}
+import type { Dispatch } from 'redux'
 
 interface DispatchProps {
     inc: (it: ItemCart) => void
     dec: (it: ItemCart) => void
 }
 
-type Props = OwnProps & DispatchProps
-
-type UnknownAction = CartItemAction | Action<any>
+type Props = ItemCartProps & DispatchProps
 
 const CartItem: React.FC<Props> = ({ item, inc, dec }) => (
     <li className="cart_li flex py-6">
