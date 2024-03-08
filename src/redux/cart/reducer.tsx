@@ -1,4 +1,4 @@
-import type { Cart, CartItemAction } from '../../types/types'
+import type { CartType, CartItemAction } from '../../types/types'
 import {
     CART_ADDITEM,
     CART_REMOVEITEM,
@@ -6,14 +6,14 @@ import {
     CART_DECREASECOUNT
 } from './action_types'
 
-const cartState: Cart[] = []
+const cartState: CartType[] = []
 
-const cartReducer = (state = cartState, action: CartItemAction): Cart[] => {
+const cartReducer = (state = cartState, action: CartItemAction): CartType[] => {
     let newState = state
 
     switch (action.type) {
         case CART_ADDITEM:{
-            const aux: Cart = { ...action.payload, count: 1 }
+            const aux: CartType = { ...action.payload, count: 1 }
             newState.push(aux)
             return newState
             }
