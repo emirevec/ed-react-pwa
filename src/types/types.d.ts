@@ -11,20 +11,14 @@ export interface Prod {
 
 export type ProductList = Prod[]
 
-// Remeber to check and delete
-export interface CartIt {
-    productId: string
-    count: number
-}
-
-export type ItemCart = Prod & CartIt
-
-export interface Cart {
+export interface CartType {
     id: Prod['id']
     sizes: Prod['sizes']
     colors: Prod['colors']
     count: number
 }
+
+export type ItemCart = Prod & CartType
 
 export interface mockData {
     getAllProducts: () => Promise<Prod[]>
