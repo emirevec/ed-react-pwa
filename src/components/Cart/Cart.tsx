@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react'
-import type { ProductList, CartIt, ItemCart } from '../../types/types'
+import type { ProductList, CartType, ItemCart } from '../../types/types'
 import { CartItem } from './'
 import { ButtonClose, ButtonLink } from '../Buttons'
 import { withDataSources } from '../../context'
 import { connect } from 'react-redux'
-
-type CartItems = CartIt[]
 
 let Cart: React.FC<any> = ({ dataSources, cartItemsSource }: any): JSX.Element => {
     const [products, setProducts] = useState<ProductList>([])
@@ -22,54 +20,19 @@ let Cart: React.FC<any> = ({ dataSources, cartItemsSource }: any): JSX.Element =
     void fetchData()
     }, [])
 
-    const addedProducts = cartItemsSource.map(it => {
-        const aux = products.find(i => i.id == it.id)
-        if (aux == undefined) {
+    const addedProducts = cartItemsSource.map((it: CartType) => {
+        const aux = products.find(i => i.id === it.id)
+        if (aux === undefined) {
             return it
         } else {
             return {
+                ...it,
                 title: aux.title,
-                size: it.size,
-                color: it.color,
                 price: aux.price,
-                count: it.count
+                category: aux.category
             }
         }
-    }).map((val, index) => <CartItem key={index} item={val}></CartItem>)
-    /* useEffect(() => {
-        const add: Array<React.ReactElement<any, any>> = cartProducts.map((cProd): ItemCart => {
-            const aux = products.find(i => i.id === cProd.productId)
-            if (aux !== undefined) {
-                return {
-                    id: aux.id,
-                    title: aux?.title,
-                    src: aux?.src,
-                    price: aux?.price,
-                    description: aux?.description,
-                    sizes: [],
-                    colors: [],
-                    category: aux?.category,
-                    productId: cProd.productId,
-                    count: cProd.count
-                }
-            } else {
-                return {
-                    id: '',
-                    title: '',
-                    src: '',
-                    price: 0,
-                    description: '',
-                    sizes: [],
-                    colors: [],
-                    category: '',
-                    productId: '',
-                    count: 0
-                }
-            }
-            }).map((val, index) => <CartItem key={index} item={val}></CartItem>)
-            console.log(add)
-        setAddedProducts(add)
-    }, [products]) */
+    }).map((val: ItemCart, index: any) => <CartItem key={index} item={val}></CartItem>)
     return (
         <div className="relative z-10" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
             <div id="cart_opacity" className="fixed inset-0 bg-gray-500 bg-opacity-100 transition-opacity ease-in-out duration-500 opacity-0"></div>
@@ -125,7 +88,7 @@ let Cart: React.FC<any> = ({ dataSources, cartItemsSource }: any): JSX.Element =
 
 Cart = withDataSources(Cart)
 
-const mapStateProps = (state) => ({
+const mapStateProps = (state: any): any => ({
     cartItemsSource: state.cart
 })
 
