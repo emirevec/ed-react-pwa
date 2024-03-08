@@ -1,4 +1,4 @@
-import type { CartItemAction, Payload } from '../../types/types'
+import type { Prod, CartItemAction } from '../../types/types'
 
 import {
     CART_ADDITEM,
@@ -7,22 +7,22 @@ import {
     CART_DECREASECOUNT
 } from './action_types'
 
-export const cartAddItem = (payload: Payload): CartItemAction => ({
+export const cartAddItem = (id: Prod['id'], sizes: Prod['sizes'], colors: Prod['colors']): CartItemAction => ({
     type: CART_ADDITEM,
-    payload
+    payload: { id, sizes, colors }
 })
 
-export const cartRemoveItem = (payload: Payload): CartItemAction => ({
+export const cartRemoveItem = (id: Prod['id'], sizes: Prod['sizes'], colors: Prod['colors']): CartItemAction => ({
     type: CART_REMOVEITEM,
-    payload
+    payload: { id, sizes, colors }
 })
 
-export const cartIncreaseCount = (payload: Payload): CartItemAction => ({
+export const cartIncreaseCount = (id: Prod['id'], sizes: Prod['sizes'], colors: Prod['colors']): CartItemAction => ({
     type: CART_INCREASECOUNT,
-    payload
+    payload: { id, sizes, colors }
 })
 
-export const cartDecreaseCount = (payload: Payload): CartItemAction => ({
+export const cartDecreaseCount = (id: Prod['id'], sizes: Prod['sizes'], colors: Prod['colors']): CartItemAction => ({
     type: CART_DECREASECOUNT,
-    payload
+    payload: { id, sizes, colors }
 })
