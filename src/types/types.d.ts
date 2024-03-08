@@ -1,3 +1,6 @@
+import type { Action } from 'redux'
+
+// Product:
 export interface Prod {
     id: string
     title: string
@@ -11,6 +14,8 @@ export interface Prod {
 
 export type ProductList = Prod[]
 
+// Cart:
+
 export interface CartType {
     id: Prod['id']
     sizes: Prod['sizes']
@@ -19,6 +24,12 @@ export interface CartType {
 }
 
 export type ItemCart = Prod & CartType
+
+interface ItemCartProps {
+    item: ItemCart
+}
+
+// Provider
 
 export interface mockData {
     getAllProducts: () => Promise<Prod[]>
@@ -34,6 +45,8 @@ export interface ContextValue {
     }
 }
 
+// Redux
+
 interface Payload {
     id: Prod['id']
     sizes: Prod['sizes']
@@ -44,3 +57,5 @@ interface CartItemAction extends Action {
     type: string
     payload: Payload
 }
+
+type UnknownAction = CartItemAction | Action<any>
