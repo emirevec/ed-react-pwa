@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import type { Prod, ProductList } from '../../types/types'
 import { ProductStar } from './'
-import { ButtonLink, ButtonClose } from '../../components/Buttons'
+import { ButtonAddToCart, ButtonClose } from '../../components/Buttons'
 import { withDataSources } from '../../context'
 
 let Product: React.FC<any> = ({ dataSources }: any): JSX.Element => {
@@ -25,7 +25,11 @@ let Product: React.FC<any> = ({ dataSources }: any): JSX.Element => {
     useEffect(() => {
         const idParam = id?.substring(1)
         const aux = products.find(item => item.id === idParam)
-        setProd(aux)
+        if (aux === undefined) {
+            console.error('There is no product')
+        } else {
+            setProd(aux)
+        }
     }, [id, products])
 
     return (
@@ -67,7 +71,9 @@ let Product: React.FC<any> = ({ dataSources }: any): JSX.Element => {
                                 </div>
                                 <div className="flex items-center justify-between">
                                     <span className="text-3xl font-bold text-gray-900 dark:text-white">$ {prod?.price} </span>
-                                    <ButtonLink to='/cart' text='Add to cart'></ButtonLink>
+                                    { prod != null && <ButtonAddToCart item={prod} addToCart={function (item: Prod): void {
+                                        throw new Error('Function not implemented.')
+                                    } } ></ButtonAddToCart>}
                                 </div>
                             </div>
                         </div>

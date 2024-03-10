@@ -7,11 +7,12 @@ import type { Dispatch } from 'redux'
 interface DispatchProps {
     inc: (it: ItemCart) => void
     dec: (it: ItemCart) => void
+    del: (it: ItemCart) => void
 }
 
 type Props = ItemCartProps & DispatchProps
 
-const CartItem: React.FC<Props> = ({ item, inc, dec }) => (
+const CartItem: React.FC<Props> = ({ item, inc, dec, del }) => (
     <li className="cart_li flex py-6">
         <div
             className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
@@ -38,7 +39,7 @@ const CartItem: React.FC<Props> = ({ item, inc, dec }) => (
                 <div className=" cart_increase rounded-md border border-gray-300 bg-white px-3 py-1 text-sm font-medium text-gray-700 hover:bg-gray-50" onClick={() => { inc(item) }}>+</div>
             </div>
             <div className="flex">
-                <button id="{{this.id}}" type="button"
+                <button onClick={() => { del(item) }} type="button"
                     className="cart_remove_item font-medium text-strong hover:text-green-500">Remove</button>
             </div>
         </div>
@@ -47,7 +48,8 @@ const CartItem: React.FC<Props> = ({ item, inc, dec }) => (
 
 const mapDispatchToProps = (dispatch: Dispatch<UnknownAction>): DispatchProps => ({
     inc: (it: ItemCart) => dispatch(cartIncreaseCount(it.id, it.sizes, it.colors)),
-    dec: (it: ItemCart) => dispatch(cartDecreaseCount(it.id, it.sizes, it.colors))
+    dec: (it: ItemCart) => dispatch(cartDecreaseCount(it.id, it.sizes, it.colors)),
+    del: (it: ItemCart) => dispatch(cartDecreaseCount(it.id, it.sizes, it.colors))
 })
 
 export default connect(null, mapDispatchToProps)(CartItem)
