@@ -16,7 +16,7 @@ const CartItem: React.FC<Props> = ({ item, inc, dec, del }) => (
     <li className="cart_li flex py-6">
         <div
             className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-            <img src={item.src}
+            <img src= {item.src}
                 alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
                 className="h-full w-full object-cover object-center" />
         </div>
