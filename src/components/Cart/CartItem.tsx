@@ -1,6 +1,6 @@
 import React from 'react'
 import type { ItemCart, ItemCartProps, UnknownAction } from '../../types/types'
-import { cartDecreaseCount, cartIncreaseCount } from '../../redux/cart/actions'
+import { cartDecreaseCount, cartIncreaseCount, cartRemoveItem } from '../../redux/cart/actions'
 import { connect } from 'react-redux'
 import type { Dispatch } from 'redux'
 
@@ -49,7 +49,7 @@ const CartItem: React.FC<Props> = ({ item, inc, dec, del }) => (
 const mapDispatchToProps = (dispatch: Dispatch<UnknownAction>): DispatchProps => ({
     inc: (it: ItemCart) => dispatch(cartIncreaseCount(it.id, it.sizes, it.colors)),
     dec: (it: ItemCart) => dispatch(cartDecreaseCount(it.id, it.sizes, it.colors)),
-    del: (it: ItemCart) => dispatch(cartDecreaseCount(it.id, it.sizes, it.colors))
+    del: (it: ItemCart) => dispatch(cartRemoveItem(it.id, it.sizes, it.colors))
 })
 
 export default connect(null, mapDispatchToProps)(CartItem)
