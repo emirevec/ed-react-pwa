@@ -29,7 +29,8 @@ let Cart: React.FC<any> = ({ dataSources, cartItemsSource }: any): JSX.Element =
                 ...it,
                 title: aux.title,
                 price: aux.price,
-                category: aux.category
+                category: aux.category,
+                src: aux.src
             }
         }
     }).map((val: ItemCart, index: any) => <CartItem key={index} item={val}></CartItem>)

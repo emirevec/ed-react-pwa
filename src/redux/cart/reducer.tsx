@@ -13,10 +13,25 @@ const cartReducer = (state = cartState, action: CartItemAction): CartType[] => {
 
     switch (action.type) {
         case CART_ADDITEM:{
-            const aux: CartType = { ...action.payload, count: 1 }
-            newState.push(aux)
-            return newState
+            const isItemExist = newState.findIndex((item) => item.id === action.payload.id)
+                if (isItemExist !== -1) {
+                    newState = newState.map((item) => {
+                        if (item.id === action.payload.id) {
+                            return {
+                                ...action.payload,
+                                count: item.count + 1
+                            }
+                        } else {
+                            return item
+                        }
+                    })
+                } else {
+                    const aux: CartType = { ...action.payload, count: 1 }
+                    newState.push(aux)
+                }
             }
+            return newState
+
         case CART_INCREASECOUNT:
             newState = newState.map((item) => {
                 if (item.id === action.payload.id) {

@@ -24,7 +24,9 @@ let Gallery: React.FC<any> = ({ dataSources }: any): JSX.Element => {
     }, [])
 
     useEffect(() => {
-        if (filter !== '' && filter != null) {
+        if (filter === '' || filter === null) {
+            setFilteredProducts(products)
+        } else {
             const filtered = products.filter(item => item.title.toLocaleLowerCase().includes(filter.toLocaleLowerCase()))
             setFilteredProducts(filtered)
             console.log(filtered)
