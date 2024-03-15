@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { EcommerceProvider } from './context'
 import DataSources from './data'
-import { HomePage, ProductPage, CartPage } from './views'
+import { HomePage, CartPage } from './views'
 import { Provider } from 'react-redux'
 import store from './redux'
 
@@ -13,7 +13,6 @@ function App (): JSX.Element {
                     <EcommerceProvider value={DataSources}>
                         <Routes>
                             <Route path='/' element={ <HomePage/> }/>
-                            <Route path='/product/:id' element={ <ProductPage/> }/>
                             <Route path='/cart' element={ <CartPage/> }/>
                         </Routes>
                     </EcommerceProvider>
