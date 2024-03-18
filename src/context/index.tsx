@@ -1,15 +1,35 @@
-import { createContext } from 'react'
+import { createContext, useState } from 'react'
 import { type ContextValue } from '../types/types'
+import DataSources from '../data'
 
 const EcommerceContext = createContext<ContextValue | undefined>(undefined)
 
-const EcommerceProvider = EcommerceContext.Provider
+const EcommerceProvider = ({ children }: any): JSX.Element => {
+    const [showCart, setShowCart] = useState(false)
+
+    const toggleCart = (): void => {
+        setShowCart(prevState => !prevState)
+        console.log(showCart)
+    }
+
+    const contextValue = {
+        DataSources,
+        showCart,
+        toggleCart
+    }
+
+    return (
+        <EcommerceContext.Provider value={ contextValue }>
+            { children }
+        </EcommerceContext.Provider>
+    )
+}
 
 const withDataSources = (Component: React.ComponentType<any>): React.FC<any> => {
     const WithDataSources = (props: any): JSX.Element => (
     <EcommerceContext.Consumer>
         {
-            (value) => <Component {...props} dataSources={value} />
+            (value) => <Component {...props} dataSources={DataSources} />
         }
     </EcommerceContext.Consumer>
     )
