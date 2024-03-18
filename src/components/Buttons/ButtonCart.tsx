@@ -1,9 +1,10 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { EcommerceContext } from '../../context'
 
 const ButtonCart = (): JSX.Element => {
+    const { toggleCart }: any = useContext(EcommerceContext)
     return (
-        <Link to="/cart" type="button" className="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-white rounded-lg border-2 border-white hover:bg-gradient-to-r hover:from-teal-400 hover:to-lime-300 focus:ring-2 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-700" aria-expanded="false">
+        <button onClick={toggleCart} className="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-white rounded-lg border-2 border-white hover:bg-gradient-to-r hover:from-teal-400 hover:to-lime-300 focus:ring-2 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-700" aria-expanded="false">
             <span className="sr-only">Go to cart</span>
             <svg baseProfile="tiny" height="24px" version="1.2" viewBox="0 0 24 24" width="24px" fill="currentColor">
                 <g id="Layer_1">
@@ -15,7 +16,7 @@ const ButtonCart = (): JSX.Element => {
                     </g>
                 </g>
             </svg>
-        </Link>
+        </button>
     )
 }
 
