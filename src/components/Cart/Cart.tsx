@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import type { ProductList, CartType, ItemCart } from '../../types/types'
 import { CartItem } from './'
 import { ButtonClose, ButtonLink } from '../Buttons'
-import { withDataSources } from '../../context'
+import { EcommerceContext, withDataSources } from '../../context'
 import { connect } from 'react-redux'
 
 let Cart: React.FC<any> = ({ dataSources, cartItemsSource }: any): JSX.Element => {
+    const { toggleCart } = useContext(EcommerceContext)
     const [products, setProducts] = useState<ProductList>([])
 
     useEffect(() => {
@@ -47,7 +48,13 @@ let Cart: React.FC<any> = ({ dataSources, cartItemsSource }: any): JSX.Element =
                                     <div className="flex items-start justify-between">
                                         <h2 className="text-lg font-medium text-gray-900" id="slide-over-title">Shopping cart</h2>
                                         <div className="ml-3 flex h-7 items-center">
-                                            <ButtonClose></ButtonClose>
+                                            <button onClick={toggleCart} className="absolute top-0 right-0 m-2 p-2 text-gray-400 hover:text-gray-500">
+                                                <span className="absolute -inset-0.5"></span>
+                                                <span className="sr-only">Close panel</span>
+                                                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                                                </svg></button>
+                                            {/* <ButtonClose onClick={toggleCart}></ButtonClose> */}
                                         </div>
                                     </div>
                                     <div className="mt-8">

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const ButtonHamburguer = (): JSX.Element => {
     return (
         <button data-collapse-toggle="navbar-hamburger" type="button" className="block items-center justify-center p-2 w-10 h-10 text-sm text-normal rounded-lg border-2 border-white hover:bg-gradient-to-r hover:from-teal-400 hover:to-lime-300 focus:ring-2 focus:outline-none focus:ring-lime-300 dark:focus:ring-teal-700" aria-controls="navbar-hamburger" aria-expanded="false">
