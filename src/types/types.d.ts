@@ -15,7 +15,6 @@ export interface Prod {
 export type ProductList = Prod[]
 
 // Cart:
-
 export interface CartType {
     id: Prod['id']
     sizes: Prod['sizes']
@@ -30,13 +29,12 @@ interface ItemCartProps {
 }
 
 // Provider
-
 export interface mockData {
     getAllProducts: () => Promise<Prod[]>
     postCheckout: (checkoutData: any) => Promise<boolean>
 }
 
-export interface ContextValue {
+export interface DataSources {
     products: {
         all: () => Promise<Prod[]>
     }
@@ -45,8 +43,13 @@ export interface ContextValue {
     }
 }
 
-// Redux
+export interface ContextValue {
+    DataSources: DataSources
+    showCart: boolean
+    toggleCart: () => void
+}
 
+// Redux
 interface Payload {
     id: Prod['id']
     sizes: Prod['sizes']
