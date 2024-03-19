@@ -2,7 +2,6 @@ import type { Prod } from '../../types/types'
 import { ProductStar } from './'
 import { ButtonAddToCart } from '../../components/Buttons'
 
-
 const Product: React.FC<any> = ({ product, onClose }): JSX.Element => {
     return (
         <div className="relative z-10" role="dialog" aria-modal="true">
