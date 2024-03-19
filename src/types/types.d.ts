@@ -28,7 +28,7 @@ interface ItemCartProps {
     item: ItemCart
 }
 
-// Provider
+// Context
 export interface mockData {
     getAllProducts: () => Promise<Prod[]>
     postCheckout: (checkoutData: any) => Promise<boolean>
