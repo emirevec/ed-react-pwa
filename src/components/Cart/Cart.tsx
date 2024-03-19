@@ -1,12 +1,12 @@
 import { useState, useEffect, useContext } from 'react'
 import type { ProductList, CartType, ItemCart } from '../../types/types'
 import { CartItem } from './'
-import { ButtonClose, ButtonLink } from '../Buttons'
+import { ButtonLink } from '../Buttons'
 import { EcommerceContext, withDataSources } from '../../context'
 import { connect } from 'react-redux'
 
 let Cart: React.FC<any> = ({ dataSources, cartItemsSource }: any): JSX.Element => {
-    const { toggleCart } = useContext(EcommerceContext)
+    const { toggleCart }: any = useContext(EcommerceContext)
     const [products, setProducts] = useState<ProductList>([])
 
     useEffect(() => {

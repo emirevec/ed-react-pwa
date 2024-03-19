@@ -1,16 +1,16 @@
-import { useContext } from 'react'
 import { Navbar } from '../components/Navbar'
 import { Gallery } from '../components/Gallery'
 import { Cart } from '../components/Cart'
+import { useContext } from 'react'
 import { EcommerceContext } from '../context'
 
 const HomePage = (): JSX.Element => {
-    const { showCart } = useContext(EcommerceContext)
+    const { showCart }: any = useContext(EcommerceContext)
     return (
         <>
         <Navbar></Navbar>
         <Gallery></Gallery>
-        { showCart && <Cart></Cart>}
+        { showCart === true && <Cart></Cart> }
         </>
     )
 }
