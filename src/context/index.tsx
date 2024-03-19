@@ -12,7 +12,7 @@ const EcommerceProvider = ({ children }: any): JSX.Element => {
         console.log(showCart)
     }
 
-    const contextValue = {
+    const contextValue: ContextValue = {
         DataSources,
         showCart,
         toggleCart
