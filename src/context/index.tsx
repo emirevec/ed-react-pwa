@@ -9,7 +9,6 @@ const EcommerceProvider = ({ children }: any): JSX.Element => {
 
     const toggleCart = (): void => {
         setShowCart(prevState => !prevState)
-        console.log(showCart)
     }
 
     const contextValue: ContextValue = {
