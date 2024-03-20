@@ -11,7 +11,7 @@ const NavbarMenu: React.FC<Props> = ({ items }) => {
             <ul className="flex flex-wrap font-medium rounded-lg py-3 pl-2 dark:bg-gray-800 dark:border-gray-700">
                 {items.map((item) => (
                 <li key={`NavbarMenuItem${item}`}>
-                    <ButtonLink to={`/${item}`} text={item}></ButtonLink>
+                    <ButtonLink to={`/gallery?category=${item}`} text={item}></ButtonLink>
                 </li>
                 ))
                 }
