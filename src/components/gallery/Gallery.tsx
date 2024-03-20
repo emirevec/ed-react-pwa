@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { type ProductList } from '../../types/types'
 import { GalleryCard } from './'
-import { useSearchParams } from 'react-router-dom'
+import { useLocation, useSearchParams } from 'react-router-dom'
 import { withDataSources } from '../../context'
 
 let Gallery: React.FC<any> = ({ dataSources }: any): JSX.Element => {
@@ -9,6 +9,9 @@ let Gallery: React.FC<any> = ({ dataSources }: any): JSX.Element => {
     const [filteredProducts, setFilteredProducts] = useState<ProductList>([])
     const [searchParams] = useSearchParams()
     const filter: string | null = searchParams.get('q')
+    const location = useLocation()
+    const category: string | null = new URLSearchParams(location.search).get('category')
+    console.log(category)
 
     useEffect(() => {
         const fetchData = async (): Promise<void> => {
@@ -16,6 +19,7 @@ let Gallery: React.FC<any> = ({ dataSources }: any): JSX.Element => {
         const aux: ProductList = await dataSources.products.all()
         setProducts(aux)
         setFilteredProducts(aux)
+        console.log('Fetch ok')
         } catch (error) {
             console.error('Error fetching products', error)
         }
@@ -26,12 +30,24 @@ let Gallery: React.FC<any> = ({ dataSources }: any): JSX.Element => {
     useEffect(() => {
         if (filter === '' || filter === null) {
             setFilteredProducts(products)
+            console.log('Filter is empty or null')
         } else {
-            const filtered = products.filter(item => item.title.toLocaleLowerCase().includes(filter.toLocaleLowerCase()))
-            setFilteredProducts(filtered)
-            console.log(filtered)
+            const aux = products.filter(item => item.title.toLocaleLowerCase().includes(filter.toLocaleLowerCase()))
+            setFilteredProducts(aux)
+            console.log('Filtered products was set')
         }
     }, [filter, products])
+
+    useEffect(() => {
+        if (category !== '' || category !== null) {
+            const aux = products.filter(item => item.category.toLocaleLowerCase() === category?.toLocaleLowerCase())
+            setFilteredProducts(aux)
+            console.log('Category has a value and filtered product was set')
+        } else {
+            setFilteredProducts(products)
+            console.log('Category is empty or null')
+        }
+    }, [category, products])
 
     return (
         <div className='flex justify-center'>

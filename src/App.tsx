@@ -12,6 +12,7 @@ function App (): JSX.Element {
                     <EcommerceProvider>
                         <Routes>
                             <Route path='/' element={ <HomePage/> }/>
+                            <Route path='/gallery' element={ <HomePage/> }/>
                         </Routes>
                     </EcommerceProvider>
                 </BrowserRouter>
