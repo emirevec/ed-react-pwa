@@ -1,16 +1,13 @@
 import { useEffect, useState } from 'react'
 import { type ProductList } from '../../types/types'
 import { GalleryCard } from './'
-import { useLocation, useSearchParams } from 'react-router-dom'
 import { withDataSources } from '../../context'
+import { useQueryParams } from '../../hooks'
 
 let Gallery: React.FC<any> = ({ dataSources }: any): JSX.Element => {
     const [products, setProducts] = useState<ProductList>([])
     const [filteredProducts, setFilteredProducts] = useState<ProductList>([])
-    const [searchParams] = useSearchParams()
-    const filter: string | null = searchParams.get('q')
-    const location = useLocation()
-    const category: string | null = new URLSearchParams(location.search).get('category')
+    const { filter, category } = useQueryParams()
 
     useEffect(() => {
         const fetchData = async (): Promise<void> => {
