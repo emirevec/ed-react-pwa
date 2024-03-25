@@ -1,53 +1,40 @@
 import { useEffect, useState } from 'react'
 import { type ProductList } from '../../types/types'
 import { GalleryCard } from './'
-import { useLocation, useSearchParams } from 'react-router-dom'
 import { withDataSources } from '../../context'
+import { useQueryParams } from '../../hooks'
 
 let Gallery: React.FC<any> = ({ dataSources }: any): JSX.Element => {
     const [products, setProducts] = useState<ProductList>([])
     const [filteredProducts, setFilteredProducts] = useState<ProductList>([])
-    const [searchParams] = useSearchParams()
-    const filter: string | null = searchParams.get('q')
-    const location = useLocation()
-    const category: string | null = new URLSearchParams(location.search).get('category')
-    console.log(category)
+    const { filter, category } = useQueryParams()
 
     useEffect(() => {
         const fetchData = async (): Promise<void> => {
-        try {
-        const aux: ProductList = await dataSources.products.all()
-        setProducts(aux)
-        setFilteredProducts(aux)
-        console.log('Fetch ok')
-        } catch (error) {
-            console.error('Error fetching products', error)
+            try {
+            const aux: ProductList = await dataSources.products.all()
+            setProducts(aux)
+            console.log('Fetch ok')
+            } catch (error) {
+                console.error('Error fetching products', error)
+            }
         }
-    }
-    void fetchData()
+        void fetchData()
     }, [])
 
     useEffect(() => {
-        if (filter === '' || filter === null) {
-            setFilteredProducts(products)
-            console.log('Filter is empty or null')
-        } else {
-            const aux = products.filter(item => item.title.toLocaleLowerCase().includes(filter.toLocaleLowerCase()))
+        if (category !== '' && category !== null) {
+            const aux = products.filter(item => item.category.toLowerCase() === category.toLowerCase())
             setFilteredProducts(aux)
-            console.log('Filtered products was set')
+        } else {
+            setFilteredProducts(products)
         }
-    }, [filter, products])
 
-    useEffect(() => {
-        if (category !== '' || category !== null) {
-            const aux = products.filter(item => item.category.toLocaleLowerCase() === category?.toLocaleLowerCase())
+        if (filter !== '' && filter !== null) {
+            const aux = filteredProducts.filter(item => item.title.toLowerCase().includes(filter.toLowerCase()))
             setFilteredProducts(aux)
-            console.log('Category has a value and filtered product was set')
-        } else {
-            setFilteredProducts(products)
-            console.log('Category is empty or null')
         }
-    }, [category, products])
+    }, [products, category, filter])
 
     return (
         <div className='flex justify-center'>
