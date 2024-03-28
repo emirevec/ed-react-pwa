@@ -1,4 +1,4 @@
-enum SekeletonType {
+enum SkeletonType {
     Title = 'title',
     Image = 'image',
     Button = 'button',
@@ -6,22 +6,22 @@ enum SekeletonType {
 }
 
 interface SkeletonElementProps {
-    type: SekeletonType
+    type: SkeletonType
 }
 
 const SkeletonElement: React.FC<SkeletonElementProps> = ({ type }) => {
     let typeClass = ''
     switch (type) {
-        case SekeletonType.Title:
+        case SkeletonType.Title:
             typeClass = 'w-36 h-10 mb-2 bg-gray-400 animate-pulse rounded-md'
             break
-        case SekeletonType.Image:
+        case SkeletonType.Image:
             typeClass = 'w-full h-80 bg-gray-400 animate-pulse rounded-t-lg'
             break
-        case SekeletonType.Button:
+        case SkeletonType.Button:
             typeClass = 'w-36 h-8 mr-2 bg-gray-400 animate-pulse rounded-md'
             break
-        case SekeletonType.Text:
+        case SkeletonType.Text:
             typeClass = 'w-24 h-8 bg-gray-400 animate-pulse rounded-md'
             break
         default:
