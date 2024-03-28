@@ -16,7 +16,7 @@ const SkeletonElement: React.FC<SkeletonElementProps> = ({ type }) => {
             typeClass = 'w-36 h-10 mb-2 bg-gray-400 animate-pulse rounded-md'
             break
         case SkeletonType.Image:
-            typeClass = 'w-full h-80 bg-gray-400 animate-pulse rounded-t-lg'
+            typeClass = 'w-full h-80 mb-2 bg-gray-400 animate-pulse rounded-t-lg'
             break
         case SkeletonType.Button:
             typeClass = 'w-36 h-8 mr-2 bg-gray-400 animate-pulse rounded-md'
