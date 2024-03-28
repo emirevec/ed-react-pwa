@@ -28,6 +28,14 @@ interface ItemCartProps {
     item: ItemCart
 }
 
+// Skeleton
+export enum SkeletonType {
+    Title = 'title',
+    Image = 'image',
+    Button = 'button',
+    Text = 'text'
+}
+
 // Context
 export interface mockData {
     getAllProducts: () => Promise<Prod[]>
